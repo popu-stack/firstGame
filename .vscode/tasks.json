@@ -5,17 +5,13 @@
             "label": "C/C++: w64devkit build",
             "command": "C:/raylib/w64devkit/bin/g++.exe", 
             "args": [
-                "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I", "C:/raylib/w64devkit/x86_64-w64-mingw32/include",
-                "-L", "C:/raylib/w64devkit/x86_64-w64-mingw32/lib",
-                "-lraylib",
-                "-lopengl32",
-                "-lgdi32",
-                "-lwinmm"
+                    "${workspaceFolder}/src/main.cpp", 
+                    "-o",
+                    "${workspaceFolder}/bin/main.exe",
+                    "-I", "C:/raylib/w64devkit/x86_64-w64-mingw32/include",
+                    "-L", "C:/raylib/w64devkit/x86_64-w64-mingw32/lib",
+                    "-lraylib", "-lopengl32", "-lgdi32", "-lwinmm"
             ],
             "options": {
                 "cwd": "C:/raylib/w64devkit/bin"
